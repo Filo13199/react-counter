@@ -86,6 +86,12 @@ form button:hover {
   pointer-events: none;
 }
 
+.counter-button{
+
+  border-radius: 90%;
+
+  background-color: #ff6f47;
+}
 .fall {
   transform: translateY(10rem) rotateZ(20deg);
   opacity: 0;

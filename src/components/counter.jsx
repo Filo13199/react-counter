@@ -1,26 +1,18 @@
-import { queryHelpers } from "@testing-library/react";
+import MyButton from "./MyButton";
 import React, { Component } from "react";
 class Counter extends Component {
-
-
-
   state = {count :localStorage.getItem('count'),
-    imageUrl:'https://picsum.photos/200' 
+ 
 };
 
 
   render() {
     return (
       <div className="counter-container">
-        <span className="">{this.formatCount()}</span>
-        <button className="todo-button" onClick={this.handleIncrement} type="submit">
-        <i className="fas fa-plus-square"></i>
-      </button>
-      <button className="todo-button" onClick={this.handleDecrement} type="submit">
-        <i className="fas fa-minus-square"></i>
-      </button>
+      <MyButton  type="Increment" handle={this.handleIncrement} iconPath={require("../assets/AddIcon.png")} />  
+      <span className="">{this.formatCount()}</span>
 
-
+      <MyButton  type="Decrement" iconPath={require("../assets/MinusIcon.png")} handle={this.handleDecrement} />  
       </div>
     );
   }
